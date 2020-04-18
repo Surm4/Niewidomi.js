@@ -69,12 +69,6 @@ const rv_script = document.createElement(dict.script);
 rv_script.setAttribute(dict.src, apiHost);
 document.head.appendChild(rv_script);
 
-const HTMLParse = text => {
-  const html = document.createElement(dict.template);
-  html.innerHTML = text;
-  return html.content;
-};
-
 const replaceMany = (text, substrings, newSubstrings) => {
   const replaceIndex = (substr, idx) => {
     const replacedText = text.replace(substr, newSubstrings[idx]);
